@@ -1,9 +1,10 @@
 package queue
 
 import (
-	"ropobackend/internal/queue/job"
-	"ropobackend/internal/queue/worker"
 	"time"
+
+	"github.com/sudomopoy/go-queue/job"
+	"github.com/sudomopoy/go-queue/worker"
 )
 
 type Queue struct {
