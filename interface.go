@@ -1,8 +1,8 @@
 package queue
 
-import "github.com/sudomopoy/go-queue/job"
+import "github.com/sudomopoy/queue-go/job"
 
-type IQueue interface {
+type Queue interface {
 	Publish(j job.Job)
 	Subscribe() job.Job
 }

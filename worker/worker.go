@@ -3,15 +3,15 @@ package worker
 import (
 	"time"
 
-	queue "github.com/sudomopoy/go-queue"
+	queue "github.com/sudomopoy/queue-go"
 )
 
 type Worker struct {
-	Queue queue.IQueue
+	Queue queue.Queue
 	Delay time.Duration
 }
 
-func NewWorker(queue queue.IQueue, delay time.Duration) Worker {
+func NewWorker(queue queue.Queue, delay time.Duration) Worker {
 	return Worker{Queue: queue, Delay: delay}
 }
 

@@ -3,8 +3,9 @@ package queue
 import (
 	"time"
 
-	"github.com/sudomopoy/go-queue/job"
-	"github.com/sudomopoy/go-queue/worker"
+	queue "github.com/sudomopoy/queue-go"
+	"github.com/sudomopoy/queue-go/job"
+	"github.com/sudomopoy/queue-go/worker"
 )
 
 type Queue struct {
@@ -18,7 +19,7 @@ func NewQueue(queueCap int) *Queue {
 	return &Queue{Jobs: jobs, Workers: workers}
 }
 
-var _ IQueue = &Queue{}
+var _ queue.Queue = &Queue{}
 
 func (q *Queue) AddWorkers(num int, workersDelay time.Duration) {
 	var workers []worker.Worker
